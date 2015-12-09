@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="redBlue" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,87 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blue" translatesAutoresizingMaskIntoConstraints="NO" id="c1e-og-qbO">
+                                <rect key="frame" x="218" y="119" width="142" height="100"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFI-Ft-Q8G">
+                                <rect key="frame" x="133" y="285" width="66" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Hide Blue"/>
+                                <connections>
+                                    <action selector="funcHideBlueImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uUc-sO-KUe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpW-Nk-mBg">
+                                <rect key="frame" x="135" y="366" width="63" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Hide Red">
+                                    <color key="titleColor" red="1" green="0.038108011402765762" blue="0.17843523225492053" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="funcHideRedImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0nd-l7-pnj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSu-R6-d6R">
+                                <rect key="frame" x="132" y="434" width="68" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Hide Both"/>
+                                <connections>
+                                    <action selector="funcHideBothImages:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oRB-Vd-BbO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODy-03-LIz">
+                                <rect key="frame" x="130" y="404" width="74" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Show Both"/>
+                                <connections>
+                                    <action selector="funcShowBothImages:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nsM-Is-O1e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGY-ak-h34">
+                                <rect key="frame" x="130" y="243" width="72" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Show Blue"/>
+                                <connections>
+                                    <action selector="funcShowBlueImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qQe-t0-but"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdG-tL-P8E">
+                                <rect key="frame" x="132" y="323" width="69" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Show Red">
+                                    <color key="titleColor" red="1" green="0.038108011400000003" blue="0.1784352323" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="funcShowRedImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fnz-j8-t5c"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red" translatesAutoresizingMaskIntoConstraints="NO" id="gMF-Pe-Hkh">
+                                <rect key="frame" x="34" y="119" width="164" height="100"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="blueBg" destination="c1e-og-qbO" id="LFe-TB-vLa"/>
+                        <outlet property="hideBlueButton" destination="CFI-Ft-Q8G" id="M7X-f5-VV5"/>
+                        <outlet property="hideRedButton" destination="zpW-Nk-mBg" id="WDJ-Ck-Ptv"/>
+                        <outlet property="redBg" destination="gMF-Pe-Hkh" id="xKK-71-fwz"/>
+                        <outlet property="showBlueButton" destination="yGY-ak-h34" id="F5o-SJ-gxa"/>
+                        <outlet property="showRedButton" destination="KdG-tL-P8E" id="d3A-cR-J6Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="228" y="288"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="blue" width="800" height="533"/>
+        <image name="red" width="1280" height="720"/>
+    </resources>
 </document>
